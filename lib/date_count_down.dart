@@ -14,6 +14,7 @@ class CountDownText extends StatefulWidget {
       required this.finishedText,
       this.longDateName = false,
       this.style,
+      this.onFinished,
       this.showLabel = false,
       this.daysTextLong = " days ",
       this.hoursTextLong = " hours ",
@@ -26,6 +27,7 @@ class CountDownText extends StatefulWidget {
       : super(key: key);
 
   final DateTime? due;
+  final Function? onFinished;
   final String? finishedText;
   final bool? longDateName;
   final bool? showLabel;
@@ -73,6 +75,7 @@ class _CountDownTextState extends State<CountDownText> {
           widget.hoursTextShort,
           widget.minutesTextShort,
           widget.secondsTextShort,
+          widget.onFinished!,
           longDateName: widget.longDateName, showLabel: widget.showLabel),
       style: widget.style,
     );
