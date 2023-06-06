@@ -28,7 +28,8 @@ class CountDownText extends StatefulWidget {
       : super(key: key);
 
   final DateTime? due;
-  final Function? onFinished;
+  //void calback
+  final void Function()? onFinished;
   final String? finishedText;
   final bool? longDateName;
   final bool isFinished;

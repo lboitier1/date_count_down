@@ -1,6 +1,6 @@
 class CountDown {
   String timeLeft(DateTime due, String finishedText, String daysTextLong, String hoursTextLong, String minutesTextLong, String secondsTextLong, String daysTextShort, String hoursTextShort,
-      String minutesTextShort, String secondsTextShort, Function onFinished, bool isFinished,
+      String minutesTextShort, String secondsTextShort, void Function() onFinished, bool isFinished,
       {bool? longDateName, bool? showLabel}) {
     String retVal = "";
 
