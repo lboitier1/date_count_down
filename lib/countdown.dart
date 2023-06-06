@@ -59,9 +59,8 @@ class CountDown {
     }
     if (_secUntil < 1) {
       retVal = finishedText;
-      isFinished = true;
     }
-    if (isFinished && _secUntil == 0 && _minUntil == 0 && _hoursUntil == 0 && _daysUntil == 0) {
+    if (isFinished) {
       onFinished();
     }
     return retVal;

@@ -54,14 +54,17 @@ class _CountDownTextState extends State<CountDownText> {
   @override
   void initState() {
     timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      setState(() {});
+      if(!widget.isFinished) {
+        setState(() {});
+      }
+      else timer.cancel();
     });
     super.initState();
   }
 
   @override
   void dispose() {
-    timer!.cancel();
+    timer?.cancel();
     super.dispose();
   }
 

@@ -24,8 +24,9 @@ class _MyAppState extends State<MyApp> {
         home: Scaffold(
       body: Center(
         child: CountDownText(
+          isFinished: false,
           due: DateTime.now().add(const Duration(seconds: 5)),
-          finishedText: "Happy New Year!",
+          finishedText: "Test!",
           style: const TextStyle(
             fontSize: 20,
             color: Colors.black,
